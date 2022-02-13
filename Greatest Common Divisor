@@ -1,0 +1,18 @@
+#GCD 1
+# m and n are positive integer
+#r is remainder
+def gcd(m,n):
+  a=max(m,n)
+  b=min(m,n)
+  if m>0 and n>0:
+      r= a%b #remainder
+      if r  == 0:
+        return b
+      else:
+        while (r!=0):
+          a=b
+          b=r
+          r= a%b
+        return b
+x= gcd(2166,6099)
+print(x)

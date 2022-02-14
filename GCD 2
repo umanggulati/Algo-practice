@@ -1,0 +1,37 @@
+GCD 3
+#computing aj + bk = gcd where j and k are positve integers while a and b are not necessarily positve
+def gcd(m,n):
+  if m >0 and n>0:   # m and n should be positive
+
+    j = max(m,n)
+    k = min(m,n)
+    c = max(m,n)
+    d=min(m,n)
+    a1=1  
+    b=1
+    a=0
+    b1=0
+    r = c%d
+    q=c//d
+    if r==0:
+      l= a*j + b*k
+      return l
+    
+    else:
+      while(r!=0):
+
+        c=d
+        d=r
+        t=a1
+        a1=a
+        a= (t-(q*a))
+        t= b1
+        b1=b
+        b=(t-(q*b))
+        r = c%d
+        q= c//d
+      l = a *j + b*k
+      return l
+
+x=gcd(1769 , 551)
+print(x)
